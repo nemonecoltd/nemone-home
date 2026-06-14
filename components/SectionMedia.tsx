@@ -9,10 +9,10 @@ const channels = [
   },
   {
     icon: '♪',
-    platform: 'Podcast · Spotify',
+    platform: 'Podcast · Apple',
     name: '네모네AIM',
     desc: 'Taste 시리즈 · 음식과 문명 이야기',
-    href: 'https://open.spotify.com/show/033lW1LKn5eM7rMyAufqHt',
+    href: 'https://podcasts.apple.com/kr/channel/%EB%84%A4%EB%AA%A8%EB%84%A4aim/id6753140870',
     color: 'text-green-400',
   },
   {
@@ -26,7 +26,7 @@ const channels = [
   {
     icon: '✍',
     platform: '브런치',
-    name: '@you1',
+    name: '애들빙자여행러',
     desc: 'Mind · K-Life · 생각과 삶의 에세이',
     href: 'https://brunch.co.kr/@you1',
     color: 'text-yellow-400',

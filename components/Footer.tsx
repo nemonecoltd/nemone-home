@@ -11,7 +11,7 @@ export default function Footer() {
             ['nemoneai.com', 'https://nemoneai.com'],
             ['now.nemoneai.com', 'https://now.nemoneai.com'],
             ['msm.nemoneai.com', 'https://msm.nemoneai.com'],
-            ['Contact', 'mailto:futureleadet@gmail.com'],
+            ['Contact', 'mailto:contact@namoneai.com'],
           ].map(([label, href]) => (
             <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
