@@ -10,7 +10,7 @@ const services = [
   {
     icon: '🗺️',
     name: '지금여기 — NOW HERE',
-    desc: '서울·제주 하이퍼-로컬 RAG',
+    desc: '당신 3시간의 알찬 설계',
     badge: 'LIVE',
     badgeClass: 'bg-accent2/10 text-accent2',
     href: 'https://now.nemoneai.com',
@@ -18,7 +18,7 @@ const services = [
   {
     icon: '📰',
     name: '네모네AIM',
-    desc: '자체 CMS · SSO · AI 미디어',
+    desc: '당신시간의 알찬소비, 당신 주변의 변화를 관찰합니다.',
     badge: 'LIVE',
     badgeClass: 'bg-accent2/10 text-accent2',
     href: 'https://nemoneai.com',
