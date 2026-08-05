@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, Plus, Trash2, Loader2, Save, X, Lock } from 'lucide-react';
+import { ChevronLeft, Plus, Trash2, Pencil, Loader2, Save, X, Lock } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface NewsItem {
@@ -22,6 +22,7 @@ export default function AdminNewsPage() {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [editingId, setEditingId] = useState<number | null>(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -41,7 +42,21 @@ export default function AdminNewsPage() {
     else alert('비밀번호가 틀렸습니다.');
   };
 
-  const handleAdd = async (e: React.FormEvent) => {
+  const closeForm = () => {
+    setShowForm(false);
+    setEditingId(null);
+    setTitle('');
+    setContent('');
+  };
+
+  const startEdit = (item: NewsItem) => {
+    setEditingId(item.id);
+    setTitle(item.title);
+    setContent(item.content);
+    setShowForm(true);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!title || !content) return;
     setSaving(true);
@@ -49,13 +64,14 @@ export default function AdminNewsPage() {
       const fd = new FormData();
       fd.append('title', title);
       fd.append('content', content);
-      const res = await fetch(`${API_URL}/news`, {
-        method: 'POST',
+      const url = editingId ? `${API_URL}/news/${editingId}` : `${API_URL}/news`;
+      const res = await fetch(url, {
+        method: editingId ? 'PUT' : 'POST',
         headers: { 'x-news-secret': pw },
         body: fd,
       });
-      if (res.ok) { setTitle(''); setContent(''); setShowForm(false); fetchNews(); }
-      else alert('등록 실패');
+      if (res.ok) { closeForm(); fetchNews(); }
+      else alert(editingId ? '수정 실패' : '등록 실패');
     } catch {} finally { setSaving(false); }
   };
 
@@ -109,7 +125,7 @@ export default function AdminNewsPage() {
             </button>
             <h1 className="text-white text-2xl font-bold">News Management</h1>
           </div>
-          <button onClick={() => setShowForm(true)}
+          <button onClick={() => { setEditingId(null); setTitle(''); setContent(''); setShowForm(true); }}
             className="flex items-center gap-2 bg-accent text-jeju-900 px-5 py-2.5 rounded-xl font-bold hover:opacity-90 transition-opacity">
             <Plus size={18} /><span>새 소식 추가</span>
           </button>
@@ -118,12 +134,12 @@ export default function AdminNewsPage() {
         {showForm && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/60 backdrop-blur-md">
             <div className="max-w-2xl w-full bg-jeju-800 border border-white/[.1] p-8 rounded-2xl relative">
-              <button onClick={() => setShowForm(false)}
+              <button onClick={closeForm}
                 className="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors">
                 <X size={22} />
               </button>
-              <h2 className="text-white text-xl font-bold mb-6">새 소식 작성</h2>
-              <form onSubmit={handleAdd} className="space-y-5">
+              <h2 className="text-white text-xl font-bold mb-6">{editingId ? '소식 수정' : '새 소식 작성'}</h2>
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-1.5">
                   <label className="text-accent text-[10px] font-black uppercase tracking-widest">Title</label>
                   <input value={title} onChange={e => setTitle(e.target.value)}
@@ -139,7 +155,7 @@ export default function AdminNewsPage() {
                 </div>
                 <button disabled={saving}
                   className="w-full bg-accent text-jeju-900 py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 disabled:opacity-50 transition-opacity">
-                  {saving ? <Loader2 className="animate-spin" size={18} /> : <><Save size={18} /><span>게시하기</span></>}
+                  {saving ? <Loader2 className="animate-spin" size={18} /> : <><Save size={18} /><span>{editingId ? '수정하기' : '게시하기'}</span></>}
                 </button>
               </form>
             </div>
@@ -159,10 +175,16 @@ export default function AdminNewsPage() {
                   </span>
                   <h3 className="text-white font-medium truncate">{item.title}</h3>
                 </div>
-                <button onClick={() => handleDelete(item.id)}
-                  className="p-2 text-slate-600 hover:text-rose-500 hover:bg-rose-500/10 rounded-lg transition-all">
-                  <Trash2 size={18} />
-                </button>
+                <div className="flex items-center gap-1 flex-shrink-0">
+                  <button onClick={() => startEdit(item)}
+                    className="p-2 text-slate-600 hover:text-accent hover:bg-accent/10 rounded-lg transition-all">
+                    <Pencil size={18} />
+                  </button>
+                  <button onClick={() => handleDelete(item.id)}
+                    className="p-2 text-slate-600 hover:text-rose-500 hover:bg-rose-500/10 rounded-lg transition-all">
+                    <Trash2 size={18} />
+                  </button>
+                </div>
               </div>
             ))
           ) : (
