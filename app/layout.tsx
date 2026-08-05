@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     template: '%s | 네모네',
   },
   description:
-    '네모네는 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 시스템으로 구현하는 회사입니다. MSM(주식 AI 분석), 지금여기(로컬 RAG), 네모네AIM, 와랑스튜디오를 운영합니다.',
+    '네모네는 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 시스템으로 구현하는 회사입니다. MSM(주식 AI 분석), NEMONE PACE(로컬 RAG), 네모네AIM, 와랑스튜디오를 운영합니다.',
   keywords: [
     '네모네', 'AI', '인간변화', 'MSM', '주식AI분석',
-    '지금여기', '로컬가이드', '와랑스튜디오', '제주', 'RAG', 'LLM',
+    'NEMONE PACE', '로컬가이드', '와랑스튜디오', '제주', 'RAG', 'LLM',
   ],
   alternates: { canonical: '/' },
   openGraph: {
@@ -84,7 +84,7 @@ const jsonLd = {
     },
     {
       '@type': 'SoftwareApplication',
-      name: '지금여기 NOW HERE',
+      name: 'NEMONE PACE',
       applicationCategory: 'TravelApplication',
       url: 'https://now.nemoneai.com',
       description: '서울·제주 하이퍼-로컬 RAG. AI가 설계하는 3시간 코스.',

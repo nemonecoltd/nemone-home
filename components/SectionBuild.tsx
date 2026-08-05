@@ -53,15 +53,15 @@ export default function SectionBuild({ id }: { id: string }) {
             </div>
           </div>
 
-          {/* 지금여기 */}
+          {/* NEMONE PACE */}
           <div className="bg-white/[.025] border border-white/[.07] rounded-lg p-5 space-y-4">
             <div className="flex items-center justify-between">
               <p className="font-mono text-[11px] text-accent">now.nemoneai.com</p>
               <span className="bg-accent2/10 text-accent2 text-[9px] font-bold px-1.5 py-0.5 rounded-sm">LIVE</span>
             </div>
             <div>
-              <h3 className="text-base font-black text-white">지금여기</h3>
-              <p className="text-xs text-slate-400">당신 3시간의 알찬 설계</p>
+              <h3 className="text-base font-black text-white">NEMONE PACE</h3>
+              <p className="text-xs text-slate-400">당신의 다음 3시간을 설계합니다</p>
             </div>
             <ul className="space-y-1.5">
               {['Google 에코시스템 RAG', '팝업·공연·제주 행사 실시간 수집', 'AI 코스 자동 생성', '한/영 지원'].map(f => (

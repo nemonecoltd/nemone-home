@@ -9,8 +9,8 @@ const services = [
   },
   {
     icon: '🗺️',
-    name: '지금여기 — NOW HERE',
-    desc: '당신 3시간의 알찬 설계',
+    name: 'NEMONE PACE',
+    desc: '당신의 다음 3시간을 설계합니다',
     badge: 'LIVE',
     badgeClass: 'bg-accent2/10 text-accent2',
     href: 'https://now.nemoneai.com',

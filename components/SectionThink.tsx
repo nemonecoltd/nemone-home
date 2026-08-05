@@ -18,7 +18,7 @@ const domains = [
     gradient: 'from-[#10b981] to-[#34d399]',
     project: 'K-Life Project',
     question: '환경은 인간을 어떻게 바꾸는가?',
-    channels: [{ label: '와랑스튜디오', href: '#lab' }, { label: '지금여기', href: 'https://now.nemoneai.com' }],
+    channels: [{ label: '와랑스튜디오', href: '#lab' }, { label: 'NEMONE PACE', href: 'https://now.nemoneai.com' }],
   },
   {
     tag: 'Future',
