@@ -7,6 +7,7 @@ import SectionTech        from '@/components/SectionTech'
 import SectionWarang      from '@/components/SectionWarang'
 import SectionMedia       from '@/components/SectionMedia'
 import SectionNews        from '@/components/SectionNews'
+import SectionBrandTeaser from '@/components/SectionBrandTeaser'
 import Footer             from '@/components/Footer'
 
 export default function Home() {
@@ -15,13 +16,14 @@ export default function Home() {
       <Nav />
       <SectionLatestNews />
       <main>
-        <Hero          id="hero"  />
-        <SectionThink  id="think" />
-        <SectionBuild  id="build" />
-        <SectionTech   id="tech"  />
-        <SectionWarang id="lab"   />
-        <SectionMedia  id="media" />
-        <SectionNews   id="news"  />
+        <Hero              id="hero"  />
+        <SectionThink      id="think" />
+        <SectionBuild      id="build" />
+        <SectionTech       id="tech"  />
+        <SectionWarang     id="lab"   />
+        <SectionMedia      id="media" />
+        <SectionNews       id="news"  />
+        <SectionBrandTeaser id="brand" />
       </main>
       <Footer />
     </>
