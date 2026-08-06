@@ -58,6 +58,9 @@ export default function Hero({ id }: { id: string }) {
             <a href="#lab" className="text-sm font-bold px-5 py-2.5 rounded border border-white/[.1] text-slate-300 hover:border-accent/40 hover:text-white transition-all">
               와랑스튜디오 →
             </a>
+            <a href="/brand/" className="text-sm font-bold px-5 py-2.5 rounded border border-white/[.1] text-slate-300 hover:border-accent/40 hover:text-white transition-all">
+              우리 이야기 더 보기
+            </a>
           </div>
         </div>
 

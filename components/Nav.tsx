@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 const links = [
+  { label: 'Brand', href: '/brand/' },
   { label: 'Think', href: '#think' },
   { label: 'Build', href: '#build' },
   { label: 'Lab',   href: '#lab'   },
