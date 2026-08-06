@@ -10,7 +10,7 @@ const links = [
   { label: 'Build', href: '#build' },
   { label: 'Lab',   href: '#lab'   },
   { label: 'Media', href: '#media' },
-  { label: 'News',  href: '#news'  },
+  { label: 'News',  href: '/notice/' },
 ];
 
 export default function Nav() {
