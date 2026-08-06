@@ -18,6 +18,7 @@ export default function SectionBuild({ id }: { id: string }) {
           <span className="text-[10px] font-black uppercase tracking-widest text-accent border border-accent/30 px-2 py-0.5 rounded">BUILD</span>
           <h2 className="text-lg font-bold text-white">운영 중인 서비스</h2>
           <div className="flex-1 border-t border-white/[.05]" />
+          <a href="/services/" className="text-xs text-slate-500 hover:text-accent transition-colors flex-shrink-0">전체보기 →</a>
         </div>
 
         <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] gap-3">
