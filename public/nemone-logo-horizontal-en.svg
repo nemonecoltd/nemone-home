@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" width="260" height="64">
+  <g transform="translate(0,0)">
+    <svg x="0" y="0" width="64" height="64" viewBox="0 0 100 100">
+  <rect x="4" y="4" width="92" height="92" rx="22" fill="#35577A"></rect>
+  <text x="50" y="65" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0" fill="#fff">Ne</text>
+</svg>
+  </g>
+  <text x="81" y="32" dominant-baseline="central" text-anchor="start" font-family="Helvetica Neue,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="0.3" fill="#35577A">NEMONE</text>
+</svg>

@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'NEMONE PACE', '로컬가이드', '와랑스튜디오', '제주', 'RAG', 'LLM',
   ],
   alternates: { canonical: '/' },
+  icons: {
+    icon: '/nemone-favicon.svg',
+    shortcut: '/nemone-favicon.svg',
+    apple: '/nemone-favicon.svg',
+  },
   openGraph: {
     type: 'website',
     siteName: '네모네주식회사',
@@ -48,7 +53,7 @@ const jsonLd = {
       name: '네모네주식회사',
       alternateName: 'NEMONE Inc.',
       url: 'https://home.nemoneai.com',
-      logo: 'https://home.nemoneai.com/logo.png',
+      logo: 'https://home.nemoneai.com/nemone-logo-horizontal-en.svg',
       description: '음식·생각·공간·기술로 인간의 변화를 탐구하고 AI 시스템을 구현하는 회사',
       sameAs: [
         'https://www.youtube.com/@MatMatch',

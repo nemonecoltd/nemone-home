@@ -41,11 +41,11 @@ export default function Hero({ id }: { id: string }) {
         <div className="space-y-6">
           <p className="text-xs font-black uppercase tracking-widest text-accent">AI for Human Transformation</p>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
-            인간의 변화를<br />
-            연구하고 <span className="text-accent">만든다</span>
+            당신의 시간은<br />
+            <span className="text-accent">가치있습니다.</span>
           </h1>
-          <blockquote className="border-l-2 border-accent pl-4 text-slate-400 italic text-sm">
-            "What changes people?"
+          <blockquote className="border-l-2 border-accent pl-4 text-slate-400 text-sm">
+            네모네는 AI를 통해 그 시간의 밀도를 높입니다.
           </blockquote>
           <p className="text-slate-400 text-sm leading-relaxed">
             네모네는 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고,<br className="hidden md:block" />

@@ -1,8 +1,22 @@
-# 네모네 홈페이지 리뉴얼 — Claude Code 작업 요청서
+# 네모네 홈페이지 — 구조 및 개발 이력
 
-> **작업 목표:** `home.nemoneai.com` 완전 신규 개발  
+> **URL:** `home.nemoneai.com`  
 > **스택:** Next.js 14 App Router + TypeScript + Tailwind CSS  
-> **백엔드:** 없음 (정적 페이지). 게시판/콘텐츠 API는 `nemoneai.com` 백엔드가 담당하므로 이 프로젝트에서는 제외.
+> **배포:** GitHub Actions 자동배포 (rsync → VM)  
+> **백엔드:** 없음 (순수 정적 페이지)
+
+---
+
+## 변경 이력
+
+| 날짜 | 내용 |
+|------|------|
+| 2026-06-13 | 전체 리뉴얼 완료 — SectionLatestNews, SectionNews 추가, 전체 섹션 구조 확정 |
+| 2026-06-14 | Nav 모바일 메뉴 full-screen overlay → 우측 드롭다운 패널 교체 (z-index 충돌 해결, 바깥 탭 닫기 추가) |
+| 2026-06-14 | Contact 이메일 → `contact@namoneai.com` 적용 (Nav, Footer) |
+| 2026-06-14 | SectionMedia: 팟캐스트 링크 Apple Podcasts로 교체, 브런치 명칭 → 애들빙자여행러 |
+
+---
 
 ---
 
