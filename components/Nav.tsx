@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import NemoneLogo from './NemoneLogo';
 
 const links = [
   { label: 'Brand', href: '/brand/' },
@@ -41,9 +42,8 @@ export default function Nav() {
   return (
     <nav className={`sticky top-0 z-50 bg-jeju-900/95 backdrop-blur-md transition-all ${scrolled ? 'border-b border-white/[.07]' : ''}`}>
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between relative">
-        <a href="#" onClick={handleLogoClick} className="select-none flex items-center">
-          {/* 로고 원본은 라이트 배경용 네이비(#35577A) 컬러라 어두운 헤더 배경에서 대비가 약함 — 흰색으로 반전해 표시 */}
-          <img src="/nemone-logo-horizontal-en.svg" alt="NEMONE" className="h-6 w-auto brightness-0 invert" />
+        <a href="#" onClick={handleLogoClick} className="select-none flex items-center text-white">
+          <NemoneLogo lang="en" className="h-6 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

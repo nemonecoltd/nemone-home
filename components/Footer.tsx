@@ -1,9 +1,11 @@
+import NemoneLogo from './NemoneLogo';
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/[.05] py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <a href="#" className="flex items-center gap-2">
-          <img src="/nemone-logo-horizontal-kr.svg" alt="네모네" className="h-5 w-auto brightness-0 invert opacity-80" />
+        <a href="#" className="flex items-center gap-2 text-slate-300">
+          <NemoneLogo lang="kr" className="h-5 w-auto" />
           <span className="text-slate-600 text-xs font-normal">INC.</span>
         </a>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">
