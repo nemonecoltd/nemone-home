@@ -4,7 +4,7 @@ const channels = [
     platform: 'YouTube',
     name: '글로벌미식탐험대',
     desc: 'MatMatch 채널 · 미식 문명사 영상',
-    href: 'https://www.youtube.com/@MatMatch',
+    href: 'https://www.youtube.com/@nemoneaim',
     color: 'text-red-400',
   },
   {

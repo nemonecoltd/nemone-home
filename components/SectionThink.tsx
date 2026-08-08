@@ -4,7 +4,7 @@ const domains = [
     gradient: 'from-[#ff8c42] to-[#ffcb6b]',
     project: 'The Civilization of Taste',
     question: '음식은 인간을 어떻게 바꾸었는가?',
-    channels: [{ label: 'YouTube', href: 'https://www.youtube.com/@MatMatch' }, { label: 'Podcast', href: 'https://open.spotify.com/show/033lW1LKn5eM7rMyAufqHt' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
+    channels: [{ label: 'YouTube', href: 'https://www.youtube.com/@nemoneaim' }, { label: 'Podcast', href: 'https://open.spotify.com/show/033lW1LKn5eM7rMyAufqHt' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
   },
   {
     tag: 'Mind',

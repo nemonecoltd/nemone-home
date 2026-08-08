@@ -56,7 +56,7 @@ const jsonLd = {
       logo: 'https://home.nemoneai.com/nemone-logo-horizontal-en.svg',
       description: '음식·생각·공간·기술로 인간의 변화를 탐구하고 AI 시스템을 구현하는 회사',
       sameAs: [
-        'https://www.youtube.com/@MatMatch',
+        'https://www.youtube.com/@nemoneaim',
         'https://open.spotify.com/show/033lW1LKn5eM7rMyAufqHt',
         'https://brunch.co.kr/@you1',
         'https://nemoneai.com',
