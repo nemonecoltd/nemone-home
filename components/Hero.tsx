@@ -24,6 +24,14 @@ const services = [
     href: 'https://nemoneai.com',
   },
   {
+    icon: '🪴',
+    name: 'NEMONE PLANTS',
+    desc: '식물도감 & 케어 가이드',
+    badge: 'LIVE',
+    badgeClass: 'bg-accent2/10 text-accent2',
+    href: 'https://plants.nemoneai.com',
+  },
+  {
     icon: '🌿',
     name: '와랑스튜디오',
     desc: '제주 · NEMONE LAB',
