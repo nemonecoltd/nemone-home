@@ -1,6 +1,6 @@
 const services = [
   {
-    icon: '📈',
+    icon: '/service-icons/msm.svg',
     name: 'MSM — Market Signal Master',
     desc: '주식 AI 분석 · 할루시네이션 차단',
     badge: 'LIVE',
@@ -8,7 +8,7 @@ const services = [
     href: 'https://msm.nemoneai.com',
   },
   {
-    icon: '🗺️',
+    icon: '/service-icons/pace.svg',
     name: 'NEMONE PACE',
     desc: '당신의 다음 3시간을 설계합니다',
     badge: 'LIVE',
@@ -16,7 +16,7 @@ const services = [
     href: 'https://now.nemoneai.com',
   },
   {
-    icon: '📰',
+    icon: '/service-icons/aim.svg',
     name: '네모네AIM',
     desc: '당신시간의 알찬소비, 당신 주변의 변화를 관찰합니다.',
     badge: 'LIVE',
@@ -24,7 +24,7 @@ const services = [
     href: 'https://nemoneai.com',
   },
   {
-    icon: '🪴',
+    icon: '/service-icons/plants.svg',
     name: 'NEMONE PLANTS',
     desc: '식물도감 & 케어 가이드',
     badge: 'LIVE',
@@ -79,7 +79,12 @@ export default function Hero({ id }: { id: string }) {
               rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="flex items-center gap-4 bg-white/[.025] border border-white/[.07] rounded-lg px-5 py-4 hover:border-accent/25 transition-colors group"
             >
-              <span className="text-2xl flex-shrink-0">{s.icon}</span>
+              {s.icon.startsWith('/') ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={s.icon} alt="" className="w-9 h-9 rounded-md flex-shrink-0" aria-hidden="true" />
+              ) : (
+                <span className="text-2xl flex-shrink-0">{s.icon}</span>
+              )}
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-white group-hover:text-accent transition-colors truncate">{s.name}</p>
                 <p className="text-xs text-slate-500 mt-0.5">{s.desc}</p>

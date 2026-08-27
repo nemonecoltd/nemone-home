@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import NemoneLogo from './NemoneLogo';
 
 const links = [
   { label: 'Brand', href: '/brand/' },
@@ -43,7 +42,8 @@ export default function Nav() {
     <nav className={`sticky top-0 z-50 bg-jeju-900/95 backdrop-blur-md transition-all ${scrolled ? 'border-b border-white/[.07]' : ''}`}>
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between relative">
         <a href="#" onClick={handleLogoClick} className="select-none flex items-center text-white">
-          <NemoneLogo lang="en" className="h-6 w-auto" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/nemone-lens-logo-horizontal-en-reverse.png" alt="NEMONE" className="h-6 w-auto rounded" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
