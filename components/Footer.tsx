@@ -22,7 +22,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="text-[11px] text-slate-600">© 2026 네모네주식회사. All rights reserved.</p>
+        <p className="text-[11px] text-slate-600">© 2026 네모네 주식회사. All rights reserved.</p>
       </div>
     </footer>
   );

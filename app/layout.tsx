@@ -10,7 +10,7 @@ const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight
 export const metadata: Metadata = {
   metadataBase: new URL('https://home.nemoneai.com'),
   title: {
-    default: '네모네 | AI for Human Transformation',
+    default: '네모네 주식회사 | AI for Human Transformation',
     template: '%s | 네모네',
   },
   description:
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: '네모네주식회사',
+    siteName: '네모네 주식회사',
     url: 'https://home.nemoneai.com',
-    title: '네모네 | AI for Human Transformation',
+    title: '네모네 주식회사 | AI for Human Transformation',
     description: '음식·생각·공간·기술로 인간의 변화를 연구하는 AI 회사.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     locale: 'ko_KR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '네모네 | AI for Human Transformation',
+    title: '네모네 주식회사 | AI for Human Transformation',
     description: '음식·생각·공간·기술로 인간의 변화를 연구하는 AI 회사.',
     images: ['/og-image.png'],
   },
@@ -53,7 +53,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      name: '네모네주식회사',
+      name: '네모네 주식회사',
       alternateName: 'NEMONE Inc.',
       url: 'https://home.nemoneai.com',
       logo: 'https://home.nemoneai.com/nemone-logo-horizontal-en.svg',
@@ -68,7 +68,7 @@ const jsonLd = {
     {
       '@type': 'WebSite',
       url: 'https://home.nemoneai.com',
-      name: '네모네주식회사',
+      name: '네모네 주식회사',
       inLanguage: ['ko', 'en'],
     },
     {
