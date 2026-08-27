@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'NEMONE PACE', '로컬가이드', '와랑스튜디오', '제주', 'RAG', 'LLM',
   ],
   alternates: { canonical: '/' },
+  verification: { google: 'eHAc5WBdeiR9-l5T2HvCw1v4XTdjKghnA3JCCSz-YAk' },
   icons: {
     icon: '/nemone-favicon.svg',
     shortcut: '/nemone-favicon.svg',
