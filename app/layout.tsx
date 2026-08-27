@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Noto_Sans_KR } from 'next/font/google'
+import { Inter, Noto_Sans_KR, Poppins } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const notoSansKR = Noto_Sans_KR({ subsets: ['latin'], variable: '--font-noto', weight: ['300', '400', '500', '700'] })
+// 새 로고 워드마크(NEMONE) 서체에 맞춘 폰트 — 현재는 상단 메뉴에만 사용
+const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight: ['300', '400', '500'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://home.nemoneai.com'),
@@ -100,7 +102,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={`${inter.variable} ${notoSansKR.variable}`}>
+    <html lang="ko" className={`${inter.variable} ${notoSansKR.variable} ${poppins.variable}`}>
       <head>
         <script
           type="application/ld+json"

@@ -16,7 +16,7 @@ const services = [
     href: 'https://now.nemoneai.com',
   },
   {
-    icon: '/service-icons/aim.svg',
+    icon: '/service-icons/aim.png',
     name: '네모네AIM',
     desc: '당신시간의 알찬소비, 당신 주변의 변화를 관찰합니다.',
     badge: 'LIVE',

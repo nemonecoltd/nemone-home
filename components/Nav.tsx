@@ -42,13 +42,17 @@ export default function Nav() {
     <nav className={`sticky top-0 z-50 bg-jeju-900/95 backdrop-blur-md transition-all ${scrolled ? 'border-b border-white/[.07]' : ''}`}>
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between relative">
         <a href="#" onClick={handleLogoClick} className="select-none flex items-center text-white">
+          {/* 원본은 제주 블루(#1B3A5C) 배경이 통째로 박혀 있어(2055x600) 실제 배경(jeju-900)과
+              색이 달라 로고 주변에 사각형이 번져 보였음 — 배경을 투명 처리하고 여백을 크롭한
+              버전(nemone-logo-title.png)으로 교체. 로고 자체 여백이 많아 h-6에서는 글자가
+              거의 안 보일 정도로 작았어서 h-8로 키움 */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/nemone-lens-logo-horizontal-en-reverse.png" alt="NEMONE" className="h-6 w-auto rounded" />
+          <img src="/nemone-logo-title.png" alt="NEMONE" className="h-8 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map(l => (
-            <a key={l.label} href={l.href} className="text-sm text-slate-400 hover:text-white transition-colors">
+            <a key={l.label} href={l.href} className="font-poppins text-sm text-slate-400 hover:text-white transition-colors">
               {l.label}
             </a>
           ))}
@@ -79,7 +83,7 @@ export default function Nav() {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-5 py-3 text-sm text-slate-300 hover:text-accent hover:bg-white/[.05] transition-colors"
+                  className="font-poppins px-5 py-3 text-sm text-slate-300 hover:text-accent hover:bg-white/[.05] transition-colors"
                 >
                   {l.label}
                 </a>

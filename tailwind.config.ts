@@ -22,6 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Inter', 'Noto Sans KR', 'Apple SD Gothic Neo', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'Inter', 'sans-serif'],
       },
     },
   },
