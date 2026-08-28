@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Newspaper, Loader2 } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Newspaper, Loader2, Link2, Check } from 'lucide-react';
 
 interface NewsItem {
   id: number;
@@ -30,6 +30,7 @@ export default function SectionNews({ id }: { id: string }) {
   const [page, setPage] = useState(1);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
+  const [copiedId, setCopiedId] = useState<number | null>(null);
 
   const fetchNews = async (p: number) => {
     setLoading(true);
@@ -46,7 +47,58 @@ export default function SectionNews({ id }: { id: string }) {
 
   useEffect(() => { fetchNews(page); }, [page]);
 
+  // 공유 링크(?notice=123)로 들어온 경우 — 그 항목이 몇 페이지에 있는지 몰라서
+  // 전체를 한 번 가져와 위치를 찾은 뒤 해당 페이지로 이동하고 펼침
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const targetId = params.get('notice');
+    if (!targetId) return;
+
+    (async () => {
+      try {
+        const res = await fetch(`${API_URL}/news?skip=0&limit=1000`);
+        if (!res.ok) return;
+        const data = await res.json();
+        const all: NewsItem[] = data.news;
+        const idx = all.findIndex(n => String(n.id) === targetId);
+        if (idx === -1) return;
+
+        const targetPage = Math.floor(idx / LIMIT) + 1;
+        setTotal(data.total);
+        setNews(all.slice((targetPage - 1) * LIMIT, targetPage * LIMIT));
+        setPage(targetPage);
+        setExpanded(Number(targetId));
+
+        requestAnimationFrame(() => {
+          document.getElementById(`notice-${targetId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      } catch {}
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const totalPages = Math.ceil(total / LIMIT);
+
+  const handleShare = useCallback(async (item: NewsItem, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const url = `${window.location.origin}/notice/?notice=${item.id}`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: item.title, url });
+        return;
+      } catch {
+        // 공유 시트를 취소했거나 미지원 — 클립보드 복사로 폴백
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedId(item.id);
+      setTimeout(() => setCopiedId(prev => (prev === item.id ? null : prev)), 2000);
+    } catch {
+      window.prompt('아래 링크를 복사하세요', url);
+    }
+  }, []);
 
   return (
     <section id={id} className="border-t border-white/[.05] py-8 px-6 md:py-12">
@@ -70,7 +122,7 @@ export default function SectionNews({ id }: { id: string }) {
               ) : news.length > 0 ? (
                 <div className="divide-y divide-white/[.05]">
                   {news.map(item => (
-                    <div key={item.id} className={`transition-colors ${expanded === item.id ? 'bg-white/[.04]' : 'hover:bg-white/[.02]'}`}>
+                    <div key={item.id} id={`notice-${item.id}`} className={`transition-colors ${expanded === item.id ? 'bg-white/[.04]' : 'hover:bg-white/[.02]'}`}>
                       <button
                         onClick={() => setExpanded(expanded === item.id ? null : item.id)}
                         className="w-full text-left px-6 py-4 flex items-center justify-between gap-4"
@@ -91,6 +143,16 @@ export default function SectionNews({ id }: { id: string }) {
                             <p className="text-xs text-slate-400 leading-relaxed whitespace-pre-wrap">
                               {renderContentWithLinks(item.content)}
                             </p>
+                            <button
+                              onClick={(e) => handleShare(item, e)}
+                              className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-500 hover:text-accent transition-colors"
+                            >
+                              {copiedId === item.id ? (
+                                <><Check size={13} className="text-accent" /> 링크가 복사됐어요</>
+                              ) : (
+                                <><Link2 size={13} /> 공유하기</>
+                              )}
+                            </button>
                           </div>
                         </div>
                       )}
