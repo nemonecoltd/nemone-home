@@ -1,5 +1,6 @@
 import Nav                from '@/components/Nav'
 import Hero               from '@/components/Hero'
+import MainAdSlot         from '@/components/MainAdSlot'
 import SectionLatestNews  from '@/components/SectionLatestNews'
 import SectionThink       from '@/components/SectionThink'
 import SectionBuild       from '@/components/SectionBuild'
@@ -17,6 +18,7 @@ export default function Home() {
       <SectionLatestNews />
       <main>
         <Hero              id="hero"  />
+        <MainAdSlot />
         <SectionThink      id="think" />
         <SectionBuild      id="build" />
         <SectionTech       id="tech"  />

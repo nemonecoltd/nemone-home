@@ -12,6 +12,20 @@ interface NewsItem {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://nemoneai.com/api';
 
+// SectionNews.tsx(전체 소식 목록)엔 있는데 이 컴포넌트(홈 상단 최신 소식 바)엔 없어서
+// 게시글 본문에 넣은 URL이 그냥 텍스트로만 보이던 문제(2026-09-05) — 동일 로직 적용,
+// 새 창(target="_blank")으로 열림.
+function renderContentWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.split(urlRegex).map((part, i) =>
+    part.match(urlRegex)
+      ? <a key={i} href={part} target="_blank" rel="noopener noreferrer"
+          className="text-accent hover:text-jeju-300 underline underline-offset-4 transition-colors"
+          onClick={e => e.stopPropagation()}>{part}</a>
+      : part
+  );
+}
+
 export default function SectionLatestNews() {
   const [latest, setLatest] = useState<NewsItem | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -50,7 +64,7 @@ export default function SectionLatestNews() {
         {expanded && (
           <div className="pb-4 pl-[calc(3rem+1.5rem)] pr-2">
             <p className="text-xs text-slate-400 leading-relaxed whitespace-pre-wrap">
-              {latest.content}
+              {renderContentWithLinks(latest.content)}
             </p>
           </div>
         )}
