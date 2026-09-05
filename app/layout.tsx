@@ -21,10 +21,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   verification: { google: 'eHAc5WBdeiR9-l5T2HvCw1v4XTdjKghnA3JCCSz-YAk' },
+  // manifest.json이 없어 모바일 "홈 화면에 추가" 시 사이트명 첫 글자로 자동 생성된
+  // 아이콘이 뜨던 문제 수정(맛매치와 동일 원인, 2026-09-05) — apple 아이콘도 SVG는
+  // iOS가 지원 안 해 PNG로 교체
+  manifest: '/manifest.json',
   icons: {
     icon: '/nemone-favicon.svg',
     shortcut: '/nemone-favicon.svg',
-    apple: '/nemone-favicon.svg',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
     url: 'https://home.nemoneai.com',
     title: '네모네 주식회사 | AI for Human Transformation',
     description: '음식·생각·공간·기술로 인간의 변화를 연구하는 AI 회사.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/og-image.png', width: 1024, height: 500 }],
     locale: 'ko_KR',
   },
   twitter: {
@@ -108,6 +112,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Google AdSense */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274957638983041"
+          crossOrigin="anonymous"
         />
       </head>
       <body className="bg-jeju-900 text-slate-200 antialiased font-sans">{children}</body>
