@@ -71,9 +71,9 @@ const portfolio = [
     href: 'https://now.nemoneai.com',
   },
   {
-    name: 'MSM',
+    name: 'LII',
     domain: 'msm.nemoneai.com',
-    role: '국내 주식 AI 분석, 할루시네이션 차단 RAG',
+    role: '장기투자 AI 분석. 5축 스코어링·거장의 렌즈',
     status: 'LIVE',
     href: 'https://msm.nemoneai.com',
   },
@@ -127,7 +127,7 @@ export default function BrandPage() {
             "미디어 회사냐 AI 회사냐"는 잘못된 질문이었습니다. 진짜 축은 이렇습니다 —
             네모네는 사람들의 시간의 가치를 높이는 걸 돕는 회사이고, 미디어와 AI는 둘 다 그 수단입니다.
             콘텐츠(Taste/Mind/Place/Future)는 "시간을 무엇으로 채울지"에 대한 통찰이고,
-            AI 제품(PACE, MSM)은 그 통찰을 실제로 사용자의 시간에 적용하는 실행 엔진입니다.
+            AI 제품(PACE, LII)은 그 통찰을 실제로 사용자의 시간에 적용하는 실행 엔진입니다.
           </p>
         </section>
 
@@ -140,7 +140,7 @@ export default function BrandPage() {
           <p className="text-slate-400 text-sm leading-relaxed">
             겉으로 보이는 표면은 <strong className="text-slate-200 font-bold">미디어</strong>입니다 —
             콘텐츠 채널과 에디토리얼 브랜드로 사용자와 접점을 만듭니다.
-            하지만 그 표면을 가능하게 하는 인프라와 실제 제품(PACE, MSM)의 엔진은{' '}
+            하지만 그 표면을 가능하게 하는 인프라와 실제 제품(PACE, LII)의 엔진은{' '}
             <strong className="text-slate-200 font-bold">AI</strong>입니다.
           </p>
           <blockquote className="border-l-2 border-accent pl-4 text-slate-400 italic text-sm">

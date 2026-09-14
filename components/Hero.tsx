@@ -1,8 +1,8 @@
 const services = [
   {
     icon: '/service-icons/msm.svg',
-    name: 'MSM — Market Signal Master',
-    desc: '주식 AI 분석 · 할루시네이션 차단',
+    name: 'LII — Long-term Investment Intelligence',
+    desc: '장기투자 AI 분석 · 코스피200 기업',
     badge: 'LIVE',
     badgeClass: 'bg-accent2/10 text-accent2',
     href: 'https://msm.nemoneai.com',
@@ -43,8 +43,22 @@ const services = [
 
 export default function Hero({ id }: { id: string }) {
   return (
-    <section id={id} className="border-b border-white/[.05] pt-8 pb-10 px-6 md:pt-12 md:pb-14">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id={id} className="relative border-b border-white/[.05] pt-8 pb-10 px-6 md:pt-12 md:pb-14 overflow-hidden">
+      {/* 히어로가 순수 텍스트+dark bg라 "차갑다"는 피드백(2026-09-06) — 실사진을 배경에
+          깔고 페이지 다크톤(jeju-900)과 자연스럽게 섞이도록 어두운 그라데이션을 얹었다. */}
+      {/* 모바일은 세로로 길게 잘려서 기본(center) 크롭이 두 사람 사이 화분 쪽을 비추고 여성
+          얼굴이 잘리는 문제(2026-09-06 피드백) — 모바일은 여성 얼굴 위치로 크롭 기준점을
+          옮기고, 가로 폭이 넉넉한 데스크톱(md+)은 원래 중앙 기준 그대로 둔다. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/hero-photo.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-[70%_35%] md:object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-jeju-900 via-jeju-900/85 to-jeju-900/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-jeju-900 via-transparent to-jeju-900/40" />
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Copy */}
         <div className="space-y-6">
           <p className="text-xs font-black uppercase tracking-widest text-accent">AI for Human Transformation</p>

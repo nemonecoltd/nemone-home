@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     template: '%s | 네모네',
   },
   description:
-    '네모네는 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 시스템으로 구현하는 회사입니다. MSM(주식 AI 분석), NEMONE PACE(로컬 RAG), 네모네AIM, 와랑스튜디오를 운영합니다.',
+    '네모네는 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 시스템으로 구현하는 회사입니다. LII(장기투자 AI 분석), NEMONE PACE(로컬 RAG), 네모네AIM, 와랑스튜디오를 운영합니다.',
   keywords: [
-    '네모네', 'AI', '인간변화', 'MSM', '주식AI분석',
+    '네모네', 'AI', '인간변화', 'LII', '장기투자AI분석',
     'NEMONE PACE', '로컬가이드', '와랑스튜디오', '제주', 'RAG', 'LLM',
   ],
   alternates: { canonical: '/' },
@@ -88,10 +88,10 @@ const jsonLd = {
     },
     {
       '@type': 'SoftwareApplication',
-      name: 'MSM — Market Signal Master',
+      name: 'LII — Long-term Investment Intelligence',
       applicationCategory: 'FinanceApplication',
       url: 'https://msm.nemoneai.com',
-      description: '한국 주식 실시간 AI 분석. 할루시네이션 없는 수치 기반 리포트.',
+      description: 'AI가 40개 관점으로 기업을 분석하는 장기투자 인사이트 플랫폼. 5축 스코어링과 거장의 렌즈로 코스피200 기업을 검증합니다.',
       operatingSystem: 'Web',
     },
     {

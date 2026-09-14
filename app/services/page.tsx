@@ -3,11 +3,11 @@ import { services } from '@/data/services'
 
 export const metadata: Metadata = {
   title: '서비스',
-  description: '네모네가 운영 중인 서비스 — AIM, PACE, MSM, 네모네스토어, 와랑스튜디오를 한눈에 확인하세요.',
+  description: '네모네가 운영 중인 서비스 — AIM, PACE, LII, 네모네스토어, 와랑스튜디오를 한눈에 확인하세요.',
   alternates: { canonical: '/services' },
   openGraph: {
     title: '네모네 서비스',
-    description: 'AIM, PACE, MSM, 네모네스토어, 와랑스튜디오 — 네모네가 운영 중인 5개 서비스',
+    description: 'AIM, PACE, LII, 네모네스토어, 와랑스튜디오 — 네모네가 운영 중인 5개 서비스',
     url: 'https://home.nemoneai.com/services',
   },
 }

@@ -1,28 +1,21 @@
-import NemoneLogo from './NemoneLogo';
-
 export default function Footer() {
   return (
     <footer className="border-t border-white/[.05] py-8 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <a href="#" className="flex items-center gap-2 text-slate-300">
-          <NemoneLogo lang="kr" className="h-5 w-auto" />
-          <span className="text-slate-600 text-xs font-normal">INC.</span>
-        </a>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
           {[
-            ['nemoneai.com', 'https://nemoneai.com'],
-            ['now.nemoneai.com', 'https://now.nemoneai.com'],
-            ['msm.nemoneai.com', 'https://msm.nemoneai.com'],
-            ['Contact', 'mailto:contact@namoneai.com'],
+            ['네모네AIM', 'https://nemoneai.com'],
+            ['네모네페이스', 'https://now.nemoneai.com'],
+            ['네모네LII', 'https://msm.nemoneai.com'],
+            ['네모네플랜트', 'https://plants.nemoneai.com'],
           ].map(([label, href]) => (
-            <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined}
-              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer"
               className="hover:text-slate-300 transition-colors">
               {label}
             </a>
           ))}
         </div>
-        <p className="text-[11px] text-slate-600">© 2026 네모네 주식회사. All rights reserved.</p>
+        <p className="text-[11px] text-slate-600 text-center">© 2026 네모네 주식회사. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -2,12 +2,12 @@ function Tag({ label }: { label: string }) {
   return <span className="bg-white/5 text-slate-500 font-mono text-[9px] px-1.5 py-0.5 rounded">{label}</span>;
 }
 
-const msmFeatures = [
-  '기술적 분석(MACD·RSI·볼린저밴드·일목균형표) + 퀀트(몬테카를로·VaR) 백엔드 직접 연산',
-  '삼중 교차검증 실시간 시세 — 할루시네이션 원천 차단',
-  'SSE 실시간 스트리밍 리포트 출력',
+const liiFeatures = [
+  '5축 스코어링(성장성·수익성·밸류에이션·재무건전성) — 자기 역사 대비 정량 분석',
+  '거장의 렌즈 4종(퀄리티·버핏·밸류·배당) — 규칙 기반 스크리닝',
+  '코스피200 전체 기업 커버, 매일 AI 서술 자동 갱신',
+  '기존 실시간 스캐너·기술적 분석(MACD·RSI·볼린저밴드)은 "현재" 탭으로 유지',
   'Redis 다계층 캐시 · AI 모델 이원화 (감성 분류/리포트 생성 분리)',
-  'PRO: 4-팩터 스코어링으로 TOP 10 종목 자동 추천',
 ];
 
 export default function SectionBuild({ id }: { id: string }) {
@@ -22,7 +22,7 @@ export default function SectionBuild({ id }: { id: string }) {
         </div>
 
         <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] gap-3">
-          {/* MSM — featured */}
+          {/* LII — featured */}
           <div className="relative bg-jeju-500/15 border border-accent/20 rounded-lg p-6 overflow-hidden">
             <div className="absolute top-0 right-0 w-56 h-56 pointer-events-none opacity-20"
               style={{ background: 'radial-gradient(circle at top right, #00d4ff, transparent 70%)' }} />
@@ -32,12 +32,12 @@ export default function SectionBuild({ id }: { id: string }) {
                 <span className="bg-accent2/10 text-accent2 text-[9px] font-bold px-1.5 py-0.5 rounded-sm">LIVE</span>
               </div>
               <div>
-                <h3 className="text-2xl font-black text-white">MSM</h3>
-                <p className="text-sm text-slate-400">Market Signal Master</p>
+                <h3 className="text-2xl font-black text-white">LII</h3>
+                <p className="text-sm text-slate-400">Long-term Investment Intelligence</p>
               </div>
-              <p className="text-xs text-slate-400 italic">"계산은 시스템, 해석은 AI — 숫자가 틀리지 않는 분석"</p>
+              <p className="text-xs text-slate-400 italic">"기업의 과거보다, 미래를 봅니다"</p>
               <ul className="space-y-2">
-                {msmFeatures.map(f => (
+                {liiFeatures.map(f => (
                   <li key={f} className="flex items-start gap-2 text-xs text-slate-400">
                     <span className="text-accent mt-0.5 flex-shrink-0">▸</span>
                     <span>{f}</span>

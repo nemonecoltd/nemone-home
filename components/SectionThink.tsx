@@ -25,7 +25,7 @@ const domains = [
     gradient: 'from-[#00d4ff] to-[#0af5c8]',
     project: 'AI & Finance',
     question: '기술은 인간을 어떻게 바꾸는가?',
-    channels: [{ label: 'MSM', href: 'https://msm.nemoneai.com' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
+    channels: [{ label: 'LII', href: 'https://msm.nemoneai.com' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
   },
 ];
 
