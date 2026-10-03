@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <rect x="4" y="4" width="92" height="92" rx="22" fill="#35577A"></rect>
-  <text x="50" y="65" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0" fill="#fff">Ne</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs><clipPath id="c"><rect width="1024" height="1024" rx="229.2"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="1024" height="1024" fill="#1B3A5C"/>
+    <rect x="236.5" y="236.5" width="551" height="551" fill="none" stroke="#F7F6F2" stroke-width="22.5"/>
+    <rect x="446" y="446" width="132" height="132" fill="#F7F6F2"/>
+  </g>
 </svg>

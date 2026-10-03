@@ -3,12 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Newspaper, Loader2, Link2, Check } from 'lucide-react';
 
-interface NewsItem {
-  id: number;
-  title: string;
-  content: string;
-  created_at: string;
-}
+import type { NewsItem } from '@/lib/news';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://nemoneai.com/api';
 const LIMIT = 5;
@@ -24,9 +19,10 @@ function renderContentWithLinks(text: string) {
   );
 }
 
-export default function SectionNews({ id }: { id: string }) {
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [total, setTotal] = useState(0);
+export default function SectionNews({ id, initialNews = [], initialTotal = 0 }: { id: string; initialNews?: NewsItem[]; initialTotal?: number }) {
+  // 서버(빌드)에서 받은 첫 페이지를 먼저 그려 크롤러가 제목을 읽게 하고, 이후 클라이언트에서 최신으로 갱신한다
+  const [news, setNews] = useState<NewsItem[]>(initialNews);
+  const [total, setTotal] = useState(initialTotal);
   const [page, setPage] = useState(1);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
