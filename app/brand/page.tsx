@@ -27,7 +27,7 @@ const axes = [
     project: 'Brainwashing for the Self',
     question: '생각은 인간을 어떻게 바꾸는가?',
     role: '이해',
-    href: 'https://nemoneai.com',
+    href: 'https://santa.nemoneai.com',
   },
   {
     tag: 'Place',
@@ -56,6 +56,20 @@ const axes = [
 ];
 
 const portfolio = [
+  {
+    name: '산타의 칭찬카드',
+    domain: 'santa.nemoneai.com',
+    role: '마음 서비스. MBTI·혈액형으로 받는 나만의 칭찬카드와 산타의 일기',
+    status: 'LIVE',
+    href: 'https://santa.nemoneai.com',
+  },
+  {
+    name: 'NEMONE PLANTS',
+    domain: 'plants.nemoneai.com',
+    role: '식물도감·케어 가이드와 AI 식물 진단',
+    status: 'LIVE',
+    href: 'https://plants.nemoneai.com',
+  },
   {
     name: '네모네AIM',
     domain: 'nemoneai.com',

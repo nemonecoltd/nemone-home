@@ -102,6 +102,54 @@ export default function SectionBuild({ id }: { id: string }) {
               className="text-xs font-bold text-accent hover:underline">→ nemoneai.com</a>
           </div>
         </div>
+
+        {/* 최근 서비스 — 산타의 칭찬카드·NEMONE PLANTS (2026-11-13 추가) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-3 mt-3">
+          <div className="bg-white/[.025] border border-white/[.07] rounded-lg p-5 space-y-4">
+            <div className="flex items-center justify-between">
+              <p className="font-mono text-[11px] text-accent">santa.nemoneai.com</p>
+              <span className="bg-accent2/10 text-accent2 text-[9px] font-bold px-1.5 py-0.5 rounded-sm">LIVE</span>
+            </div>
+            <div>
+              <h3 className="text-base font-black text-white">산타의 칭찬카드</h3>
+              <p className="text-xs text-slate-400">이름과 MBTI·혈액형으로 받는 나만의 칭찬카드</p>
+            </div>
+            <ul className="space-y-1.5">
+              {['MBTI·혈액형 맞춤 칭찬카드 무료 발급', '카드 이미지·영상 저장, 친구에게 선물 링크 전달', '산타의 일기 연재', '로그인 없이 시작 · 통합 계정으로 보관함'].map(f => (
+                <li key={f} className="flex items-start gap-2 text-xs text-slate-400">
+                  <span className="text-accent2 flex-shrink-0">▸</span><span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-1.5">
+              {['Next.js', 'FastAPI', 'PostgreSQL', 'Gemini'].map(s => <Tag key={s} label={s} />)}
+            </div>
+            <a href="https://santa.nemoneai.com" target="_blank" rel="noopener noreferrer"
+              className="text-xs font-bold text-accent hover:underline">→ santa.nemoneai.com</a>
+          </div>
+          <div className="bg-white/[.025] border border-white/[.07] rounded-lg p-5 space-y-4">
+            <div className="flex items-center justify-between">
+              <p className="font-mono text-[11px] text-accent">plants.nemoneai.com</p>
+              <span className="bg-accent2/10 text-accent2 text-[9px] font-bold px-1.5 py-0.5 rounded-sm">LIVE</span>
+            </div>
+            <div>
+              <h3 className="text-base font-black text-white">NEMONE PLANTS</h3>
+              <p className="text-xs text-slate-400">식물도감 & 케어 가이드</p>
+            </div>
+            <ul className="space-y-1.5">
+              {['식물도감 · 케어 가이드 · 식물 매거진', '사진으로 식물 상태를 살펴 주는 AI 진단'].map(f => (
+                <li key={f} className="flex items-start gap-2 text-xs text-slate-400">
+                  <span className="text-accent2 flex-shrink-0">▸</span><span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-1.5">
+              {['Next.js', 'FastAPI', 'Gemini', 'Capacitor'].map(s => <Tag key={s} label={s} />)}
+            </div>
+            <a href="https://plants.nemoneai.com" target="_blank" rel="noopener noreferrer"
+              className="text-xs font-bold text-accent hover:underline">→ plants.nemoneai.com</a>
+          </div>
+        </div>
       </div>
     </section>
   );

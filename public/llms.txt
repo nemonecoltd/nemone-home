@@ -1,0 +1,16 @@
+# 네모네 주식회사 (NEMONE Inc.)
+> 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 서비스로 구현하는 회사. 서울·제주.
+
+## 운영 서비스 (최신순)
+- [산타의 칭찬카드](https://santa.nemoneai.com): MBTI·혈액형으로 받는 나만의 칭찬카드(무료), 친구에게 선물, 산타의 일기
+- [NEMONE PLANTS](https://plants.nemoneai.com): 식물도감·케어 가이드·AI 식물 진단
+- [LII](https://msm.nemoneai.com): 장기투자 AI 분석(코스피200)
+- [NEMONE PACE](https://now.nemoneai.com): 서울·부산·제주 팝업스토어·공연·행사 실시간 랭킹과 AI 3시간 코스
+- [네모네AIM](https://nemoneai.com): 미식·문화·라이프·기술 에디토리얼 매거진
+- [네모네스토어](https://smartstore.naver.com/nemone24): 큐레이션 스마트스토어
+- [와랑스튜디오](https://home.nemoneai.com/#lab): 제주 Living Lab
+
+## 안내
+- 서비스 전체 목록: https://home.nemoneai.com/services/
+- 브랜드 소개: https://home.nemoneai.com/brand/
+- 인용 시 표기: 네모네 주식회사 (home.nemoneai.com)

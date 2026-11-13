@@ -8,6 +8,7 @@ export default function Footer() {
             ['네모네페이스', 'https://now.nemoneai.com'],
             ['네모네LII', 'https://msm.nemoneai.com'],
             ['네모네플랜트', 'https://plants.nemoneai.com'],
+            ['산타의 칭찬카드', 'https://santa.nemoneai.com'],
           ].map(([label, href]) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer"
               className="hover:text-slate-300 transition-colors">

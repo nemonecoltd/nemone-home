@@ -1,5 +1,13 @@
 const services = [
   {
+    icon: '/service-icons/santa.png',
+    name: '산타의 칭찬카드',
+    desc: 'MBTI·혈액형으로 받는 나만의 칭찬카드 · 무료',
+    badge: 'NEW',
+    badgeClass: 'bg-accent/15 text-accent',
+    href: 'https://santa.nemoneai.com',
+  },
+  {
     icon: '/service-icons/msm.svg',
     name: 'LII — Long-term Investment Intelligence',
     desc: '장기투자 AI 분석 · 코스피200 기업',

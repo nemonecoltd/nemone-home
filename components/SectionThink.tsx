@@ -11,7 +11,7 @@ const domains = [
     gradient: 'from-[#a855f7] to-[#7c3aed]',
     project: 'Brainwashing for the Self',
     question: '생각은 인간을 어떻게 바꾸는가?',
-    channels: [{ label: '브런치 @you1', href: 'https://brunch.co.kr/@you1' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
+    channels: [{ label: '산타의 칭찬카드', href: 'https://santa.nemoneai.com' }, { label: 'nemoneai.com', href: 'https://nemoneai.com' }],
   },
   {
     tag: 'Place',

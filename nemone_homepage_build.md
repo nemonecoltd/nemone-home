@@ -15,6 +15,7 @@
 | 2026-06-14 | Nav 모바일 메뉴 full-screen overlay → 우측 드롭다운 패널 교체 (z-index 충돌 해결, 바깥 탭 닫기 추가) |
 | 2026-06-14 | Contact 이메일 → `contact@namoneai.com` 적용 (Nav, Footer) |
 | 2026-06-14 | SectionMedia: 팟캐스트 링크 Apple Podcasts로 교체, 브런치 명칭 → 애들빙자여행러 |
+| 2026-11-13 | 산타의 칭찬카드 추가 — 히어로 최상단, /services(플랜트 포함·최신순), 푸터, THINK>Mind(브런치 링크 삭제), BUILD 2행(산타·플랜트), /brand, JSON-LD·메타, public/llms.txt |
 
 ---
 
@@ -335,7 +336,7 @@ export default function Home() {
 | 도메인 | 카드 컬러바 | 프로젝트명 | 핵심 질문 | 연결 채널 |
 |---|---|---|---|---|
 | Taste | `#ff8c42 → #ffcb6b` | The Civilization of Taste | 음식은 인간을 어떻게 바꾸었는가? | YouTube · Podcast · nemoneai.com/Taste |
-| Mind | `#a855f7 → #7c3aed` | Brainwashing for the Self | 생각은 인간을 어떻게 바꾸는가? | 브런치 @you1 · nemoneai.com/Life |
+| Mind | `#a855f7 → #7c3aed` | Brainwashing for the Self | 생각은 인간을 어떻게 바꾸는가? | 산타의 칭찬카드 · nemoneai.com (브런치 링크는 2026-11-13 삭제) |
 | Place | `#10b981 → #34d399` | K-Life Project | 환경은 인간을 어떻게 바꾸는가? | 와랑스튜디오 · 지금여기 |
 | Future | `#00d4ff → #0af5c8` | AI & Finance | 기술은 인간을 어떻게 바꾸는가? | MSM · nemoneai.com/Tech |
 
