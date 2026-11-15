@@ -17,7 +17,7 @@ export const services: ServiceItem[] = [
     domain: 'santa.nemoneai.com',
     status: 'LIVE',
     axis: 'Mind',
-    description: 'MBTI와 혈액형만 알려 주면 산타가 나만의 칭찬카드를 만들어 드려요. 무료로 받고, 친구에게 선물하고, 산타의 일기도 읽어 보세요.',
+    description: 'MBTI와 혈액형만 알려 주면 산타가 나만의 칭찬카드를 만들어 드려요. 무료로 받고, 친구에게 선물하고, 산타의 수다도 읽어 보세요.',
     ctaLabel: '칭찬카드 받기',
     url: 'https://santa.nemoneai.com',
   },

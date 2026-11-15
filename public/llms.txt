@@ -2,7 +2,7 @@
 > 음식·생각·공간·기술이 인간을 어떻게 바꾸는지 탐구하고, 그 통찰을 AI 서비스로 구현하는 회사. 서울·제주.
 
 ## 운영 서비스 (최신순)
-- [산타의 칭찬카드](https://santa.nemoneai.com): MBTI·혈액형으로 받는 나만의 칭찬카드(무료), 친구에게 선물, 산타의 일기
+- [산타의 칭찬카드](https://santa.nemoneai.com): MBTI·혈액형으로 받는 나만의 칭찬카드(무료), 친구에게 선물, 산타의 수다
 - [NEMONE PLANTS](https://plants.nemoneai.com): 식물도감·케어 가이드·AI 식물 진단
 - [LII](https://msm.nemoneai.com): 장기투자 AI 분석(코스피200)
 - [NEMONE PACE](https://now.nemoneai.com): 서울·부산·제주 팝업스토어·공연·행사 실시간 랭킹과 AI 3시간 코스

@@ -115,7 +115,7 @@ export default function SectionBuild({ id }: { id: string }) {
               <p className="text-xs text-slate-400">이름과 MBTI·혈액형으로 받는 나만의 칭찬카드</p>
             </div>
             <ul className="space-y-1.5">
-              {['MBTI·혈액형 맞춤 칭찬카드 무료 발급', '카드 이미지·영상 저장, 친구에게 선물 링크 전달', '산타의 일기 연재', '로그인 없이 시작 · 통합 계정으로 보관함'].map(f => (
+              {['MBTI·혈액형 맞춤 칭찬카드 무료 발급', '카드 이미지·영상 저장, 친구에게 선물 링크 전달', '산타의 수다 연재', '로그인 없이 시작 · 통합 계정으로 보관함'].map(f => (
                 <li key={f} className="flex items-start gap-2 text-xs text-slate-400">
                   <span className="text-accent2 flex-shrink-0">▸</span><span>{f}</span>
                 </li>

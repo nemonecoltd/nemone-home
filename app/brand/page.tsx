@@ -59,7 +59,7 @@ const portfolio = [
   {
     name: '산타의 칭찬카드',
     domain: 'santa.nemoneai.com',
-    role: '마음 서비스. MBTI·혈액형으로 받는 나만의 칭찬카드와 산타의 일기',
+    role: '마음 서비스. MBTI·혈액형으로 받는 나만의 칭찬카드와 산타의 수다',
     status: 'LIVE',
     href: 'https://santa.nemoneai.com',
   },
