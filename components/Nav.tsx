@@ -10,6 +10,7 @@ const links = [
   { label: 'Build', href: '#build' },
   { label: 'Lab',   href: '#lab'   },
   { label: 'Media', href: '#media' },
+  { label: 'Store', href: '#store' },
   { label: 'News',  href: '/notice/' },
 ];
 

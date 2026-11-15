@@ -66,6 +66,8 @@ const jsonLd = {
         'https://www.youtube.com/@nemoneaim',
         'https://open.spotify.com/show/033lW1LKn5eM7rMyAufqHt',
         'https://brunch.co.kr/@you1',
+        'https://www.facebook.com/profile.php?id=61572151718459',
+        'https://smartstore.naver.com/nemone24',
         'https://nemoneai.com',
       ],
     },
